@@ -5,7 +5,6 @@ import { evaluate } from 'mathjs';
 
 export function Teclas() {
 	const [num, setNum] = useState('');
-
 	const tecla = [
 		{ color: 'btnGray', data: 'AC' },
 		{ color: 'btnGray', data: '+/-' },
@@ -28,6 +27,24 @@ export function Teclas() {
 		{ color: 'btnYellow', data: '=' },
 	];
 
+	const onButtonClick = (e) => {
+		const lastInput = e.data;
+		const isEqualSign = lastInput === '=';
+		const result = isEqualSign ? evaluate(num) : num + lastInput;
+		if (lastInput === 'AC') {
+			setNum('');
+		} else if (num=== '') {
+			num + lastInput;
+			// setNum(result);
+			// setNum('');
+		} else {
+			setNum(result);
+			// alert('prueba');
+		}
+	};
+	// console.log(num);
+	// console.log(num);
+
 	return (
 		<>
 			<Pantalla input={num} />
@@ -36,7 +53,7 @@ export function Teclas() {
 					<button
 						key={i}
 						className={`${e.data == '0' ? styles.hans : styles[e.color]} `}
-						onClick={() => (e.data == '=' ? setNum(evaluate(num)) : setNum(num + e.data))}
+						onClick={() => onButtonClick(e)}
 					>
 						{e.data}
 					</button>
