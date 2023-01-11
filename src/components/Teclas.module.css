@@ -1,33 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(to right, #decc67, #e0a395);
+	font-family: 'Poppins', sans-serif;
+	height: 100vh;
+}
+.calculator {
+	/* background-image: linear-gradient(to right,#DECC67, #E0A395 ); */
+	/* /*background: linear-gradient(-45deg, #F9F9F9 0%, #02A388 100% ); */
+	margin-top: 100px;
+}
+
 .container {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	/* grid-column: 1 / span 2; */
-	/* grid-template-columns: [first] 50px [line2] 50px [line3] auto [col4-start] 50px; */
-	/* grid-template-columns:repeat(auto-fit, minmax(50px, 1fr));; */
-	gap: 1em;
+	grid-template-columns: repeat(4, 100px);
+	grid-template-rows: repeat(5, 100px);
+	text-align: center;
+	backdrop-filter: blur(15px);
+	background-color: rgba(255, 255, 255, 0.2);
 }
 .btnGray {
 	color: black;
-	background-color: #A0A0A0;
+	border: 1px solid white;
+	outline: none;
+	/* background-color: rgba(255, 255, 255, 0.75); */
 }
+
 .btnYellow {
-	color:white;
-	background-color: #F69906;
+	color: white;
+	/* background-color: #f69906; */
 }
 
 .btnBlack,
 .hans {
 	color: white;
-	background-color: #313131;
+	/* background-color: #313131; */
 }
 .hans {
-    grid-column:1/3;
+	grid-column: 1/3;
 }
-body{
+body {
 	font-size: 2em;
 	margin: 0;
 	padding: 0;
 }
-.error{
-	color:white;
+.error {
+	color: white;
+	text-align: center;
+	font-size: 1.5rem;
+	margin-bottom: 1.5rem;
+	width: 400px;
+	position: absolute;
+	top: 50px;
+	white-space:pre-line;
+}
+.btn {
+	font-size: 1.4rem;
+	outline: none;
+	border: 1px solid white;
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.75);
+	color: black;
+	backdrop-filter: blur(20px);
 }
