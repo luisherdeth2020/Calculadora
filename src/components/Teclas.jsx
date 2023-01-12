@@ -29,27 +29,19 @@ export function Teclas() {
 		{ color: 'btnYellow', data: '=' },
 	];
 
-	console.log('valor input ' + input);
-	console.log(typeof input);
 	const onButtonClick = (e) => {
 		const lastInput = e.data;
-		const lastChar = input[input.length - 1];
 		const operators = /[-+*%/]/;
-		const isAC = lastInput === 'AC';
-		// const negativeOperator = /-\D/;
-		// const doublePlus = /[++]/;
+		const isAC = (lastInput === 'AC' )
+		// const pepe = (lastInput === 'AC' ) ? 'true': 'false'
 
-		if (lastInput === 'AC') {
+		if (isAC === 'AC') {
 			setInput('');
-		}
-		// else if (isNumber(input)) {
-		// 	setInput(`${input}`);
-		// 	setErrorMessage({
-		// 		show: false,
-		// 		message: '',
-		// 	});
-		// }
-		else if (lastInput === '=') {
+			setErrorMessage({
+				show: false,
+				message: '',
+			});
+		} else if (lastInput === '=') {
 			try {
 				//Me devuelve el resultado en String
 				//Para luego no tener problemas al añadir un caracter
