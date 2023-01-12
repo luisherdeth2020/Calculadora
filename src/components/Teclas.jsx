@@ -28,49 +28,32 @@ export function Teclas() {
 		{ color: 'btnBlack', data: '.' },
 		{ color: 'btnYellow', data: '=' },
 	];
+
+	console.log('valor input ' + input);
+	console.log(typeof input);
 	const onButtonClick = (e) => {
 		const lastInput = e.data;
 		const lastChar = input[input.length - 1];
 		const operators = /[-+*%/]/;
 		const isAC = lastInput === 'AC';
-		const negativeOperator = /-\D/;
-		// const doubleMinus = /--/;
-		const doublePlus = /[++]/;
-		// const jojo = /[++]--/;
-		const operator = /[-+*%/]/;
-		// const lol = /[-+]/
-		if (isAC) {
+		// const negativeOperator = /-\D/;
+		// const doublePlus = /[++]/;
+
+		if (lastInput === 'AC') {
 			setInput('');
-		} 
-		// else if(operator.test(input)){
-		// 	// alert('hola')
-		// 	// setInput(`${input.charAt(length-1).replace(input,`${input+lastInput}`)}`);
-		// 	setInput(`${input.substring(0,input.length-1)}${lastInput}`);
-		// 	setErrorMessage({ show: false, message: '' });
-
-		//  }
-		
-
-		
-		else if (isNumber(lastInput)) {
-			// alert('hola');
-			setErrorMessage({ show: false, message: '' });
-			setInput(`${input}${lastInput}`);
-		} else if (lastInput === '=' && input === '') {
-			setInput(`${input}`);
-			setErrorMessage({ show: true, message: 'Por favor, no sea pto e ingrese datos. tk😘' });
-		} else if (input.length < 3 && lastInput === '=') {
-			setErrorMessage({ show: true, message: 'No se puede realizar la operación' });
-			setInput(`${input}`);
-		} else if (lastInput === '=') {
+		}
+		// else if (isNumber(input)) {
+		// 	setInput(`${input}`);
+		// 	setErrorMessage({
+		// 		show: false,
+		// 		message: '',
+		// 	});
+		// }
+		else if (lastInput === '=') {
 			try {
-<<<<<<< HEAD
 				//Me devuelve el resultado en String
 				//Para luego no tener problemas al añadir un caracter
 				setInput(`${evaluate(input)}`);
-=======
-				setInput(evaluate(input));
->>>>>>> parent of 61fd210 (Calculadora v0.1)
 				setErrorMessage({
 					show: false,
 					message: '',
@@ -81,65 +64,23 @@ export function Teclas() {
 					message: `Que haces bobo \nanda pa' allá😒`,
 				});
 			}
-		} 
-		// ! mirar mañana
-		// if (lastInput === '*' || lastInput === '/') {
-		// 	if (lastChar === '*' || lastChar === '/') {
-		// 		return;
-		// 	}
-		// }
-		// else if (operators.test(input) && isNumber(lastInput) ) {
-		else if (operators.test(input)) {
-			// alert('hola')
-			// setInput(`${input.charAt(length-1).replace(input,`${input+lastInput}`)}`);
-			setInput(`${input.substring(0, input.length - 1)}${lastInput}`);
-			setErrorMessage({ show: false, message: '' });
-		} else if (lastInput === 'DEL') {
+		}
+
+		// Elimina el ÚLTIMO valor del INPUT y muestra lo anterior (12+) --> (12)
+		else if (lastInput === 'DEL') {
 			setInput(input.toString().slice(0, -1));
-			setErrorMessage({ show: false, message: '' });
-		} else if (input === '') {
-			setErrorMessage({ show: false, errorMessage: '' });
+		}
+
+		//  Evalua si el INPUT contiene el operador (-,+,*,/)
+		//  Me devuelves TODO el valor del input MENOS el último y AÑADE la TECLA(valor) PULSADA
+		else if (operators.test(input.toString().slice(-1))) {
+			setInput(`${input.toString().slice(0, -1)}${lastInput}`);
+		}
+		// Muestra la TECLA(valor) introducido en PANTALLA(calculadora)
+		else {
 			setInput(`${input}${lastInput}`);
-		} else if (input === operators) {
-			setInput(`${input}${lastInput}`);
-		} else if (negativeOperator.test(input)) {
-			setErrorMessage({
-				show: true,
-				message: 'No se puede realizar la operación pto😎',
-			});
-		} 
-		
-		 if (doublePlus.test(input)) {
-				setErrorMessage({
-					show: true,
-					message: 'No se puede ++++',
-				});
-				// return;
-			} 
-			
-			
-			else if (lastChar === '-' && operator.test(lastInput)) {
-				setErrorMessage({
-					show: true,
-					message: 'No se puede realizar la operación despues de un numero negativo',
-				});
-				return;
-			} else if (lastInput === '.') {
-				setInput(`${input}${lastInput}`);
-			} else if (operators.test(lastInput)) {
-				setInput(`${input}${lastInput}`);
-			}
+		}
 	};
-
-
-
-	// useEffect(() => {
-	//   first
-
-	//   return () => {
-	// 	second
-	//   }
-	// }, [third])
 
 	useEffect(() => {
 		document.addEventListener('keyup', handleKeyUp);
@@ -201,5 +142,3 @@ export function Teclas() {
 	);
 }
 export default Teclas;
-
-// Bug encontrado
