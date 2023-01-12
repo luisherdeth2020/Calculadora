@@ -1,8 +1,6 @@
 import styles from './Pantalla.module.css';
 
-export function Pantalla({ input}) {
-	
-	// <button onClick={onButtonClick} />;
+export function Pantalla({ input }) {
 	return <div className={styles.screen}>{input}</div>;
 }
 export default Pantalla;

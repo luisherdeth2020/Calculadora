@@ -1,17 +1,45 @@
- @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-  * {
-      box-sizing: border-box;
-      margin: 0px;
-      padding: 0px;
-    }
-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-    background-image: linear-gradient(to right,#DECC67, #E0A395 );
-    /* /*background: linear-gradient(-45deg, #F9F9F9 0%, #02A388 100% ); */
-	font-size: 16px;
-	font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
 }
 
+.App {
+	align-items: center;
+	background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+	display: flex;
+	font-family: 'Poppins', sans-serif;
+	/* background: linear-gradient(90deg, rgba(7, 6, 37, 1) 0%, rgba(39, 39, 111, 1) 40%, rgba(11, 14, 33, 1) 100%); */
+	font-size: 16px;
+	justify-content: space-evenly;
+	min-height: 100vh;
+}
+.title {
+	color: #fff;
+	font-size: 2.5rem;
+	font-weight: bold;
+	transform: rotate(180deg) scale(1.5);
+	-webkit-transform: rotate(180deg) scale(1.5);
+	-moz-transform: rotate(180deg) scale(1.5);
+	-ms-transform: rotate(180deg) scale(1.5);
+	-o-transform: rotate(180deg) scale(1.5);
+	writing-mode: vertical-rl;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: vertical-rl;
+}
+
+.titleRight {
+	color: #fff;
+	font-size: 2.5rem;
+	font-weight: bold;
+	transform: rotate(180deg) scale(1.5);
+	-webkit-transform: rotate(180deg) scale(1.5);
+	-moz-transform: rotate(180deg) scale(1.5);
+	-ms-transform: rotate(180deg) scale(1.5);
+	-o-transform: rotate(180deg) scale(1.5);
+	/* texto en vertical, siempre me va valer 1.2em */
+	writing-mode: vertical-rl;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: vertical-rl;
+}

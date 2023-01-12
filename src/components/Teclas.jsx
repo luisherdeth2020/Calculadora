@@ -42,9 +42,7 @@ export function Teclas() {
 			});
 		} else if (lastInput === '=' && isNumber(input)) {
 			setInput(`${input}`);
-		} 
-		
-		else if (lastInput === '=') {
+		} else if (lastInput === '=') {
 			try {
 				//Me devuelve el resultado en String
 				//Para luego no tener problemas al añadir un caracter
@@ -118,18 +116,18 @@ export function Teclas() {
 	};
 	return (
 		<>
-			{errorMessage.show && <div className={styles.error}>{errorMessage.message}</div>}
 			<div className={styles.calculator}>
+				{errorMessage.show && <div className={styles.error}>{errorMessage.message}</div>}
 				<Pantalla input={input} />
 				<div className={styles.container}>
 					{tecla.map((e, i) => (
-						<button
+						<span
 							key={i}
-							className={`${styles.btn} ${e.data == '0' ? styles.hans : styles[e.color]} `}
+							className={`${e.data == '0' ? styles.hans : styles.btn} `}
 							onClick={() => onButtonClick(e)}
 						>
 							{e.data}
-						</button>
+						</span>
 					))}
 				</div>
 			</div>
