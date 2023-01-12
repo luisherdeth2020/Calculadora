@@ -53,6 +53,8 @@ export function Teclas() {
 		
 		else if (lastInput === '=') {
 			try {
+				//Me devuelve el resultado en String
+				//Para luego no tener problemas al añadir un caracter
 				setInput(`${evaluate(input)}`);
 				setErrorMessage({
 					show: false,
