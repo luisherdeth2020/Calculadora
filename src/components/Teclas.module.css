@@ -41,3 +41,20 @@
 	outline: none;
 	
 }
+
+.years{
+	text-align: center;
+	margin-top: 2rem;
+	/* color:rgba(255, 255, 255, 0.72); */
+	color:white;
+	/* opacity: 0.8; */
+	
+}
+a{
+	text-decoration: none;
+	color:rgba(255, 255, 255, 0.72);
+
+}
+a:hover{
+	color:white;
+}

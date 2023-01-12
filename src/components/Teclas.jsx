@@ -7,6 +7,9 @@ export function Teclas() {
 	const [input, setInput] = useState('');
 	const [errorMessage, setErrorMessage] = useState({ show: false, message: '' });
 
+	const year = new Date().getFullYear();
+
+
 	const tecla = [
 		{ color: 'btnGray', data: 'AC' },
 		{ color: 'btnGray', data: 'DEL' },
@@ -114,6 +117,7 @@ export function Teclas() {
 			}
 		}
 	};
+
 	return (
 		<>
 			<div className={styles.calculator}>
@@ -130,6 +134,9 @@ export function Teclas() {
 						</span>
 					))}
 				</div>
+				<p className={styles.years}>
+					Copyright &copy; <span>{year}</span> <a href="https://luisherdeth.com/">@luisherdeth</a>
+				</p>
 			</div>
 		</>
 	);
