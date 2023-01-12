@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './Teclas.module.css';
 import Pantalla from './Pantalla';
-import { evaluate, isNumber, isString } from 'mathjs';
+import { evaluate, isNumber } from 'mathjs';
 
 export function Teclas() {
 	const [input, setInput] = useState('');
@@ -29,13 +29,12 @@ export function Teclas() {
 		{ color: 'btnYellow', data: '=' },
 	];
 
-	console.log(input.length);
 	const onButtonClick = (e) => {
 		const lastInput = e.data;
 		const operators = /[-+*%/]/;
 		const isAC = lastInput === 'AC';
 
-		if (isAC && isNumber(input)) {
+		if (isAC) {
 			setInput('');
 			setErrorMessage({
 				show: false,
@@ -70,7 +69,6 @@ export function Teclas() {
 		//  Evalua si el INPUT contiene el operador (-,+,*,/)
 		//  Me devuelves TODO el valor del input MENOS el último y AÑADE la TECLA(valor) PULSADA
 		else if (operators.test(input.toString().slice(-1)) && operators.test(lastInput)) {
-			alert("jeje")
 			setInput(`${input.toString().slice(0, -1)}${lastInput}`);
 		}
 		// Muestra la TECLA(valor) introducido en PANTALLA(calculadora)

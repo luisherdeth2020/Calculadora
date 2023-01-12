@@ -1,11 +1,14 @@
-.screen{
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    padding: 1rem;
-    font-size: 3rem;
-    font-weight: 400;
-    color:white;
-    background-color: rgba(0, 0, 0, .75);
+.screen {
+    max-width: 400px;
+	height: 350px;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	padding: 1rem;
+	font-size: 3rem;
+	font-weight: 400;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.75);
+	word-wrap: break-word;
+	word-break: break-all;
 }
