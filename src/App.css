@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
 	box-sizing: border-box;
 	margin: 0px;
@@ -74,6 +75,8 @@
 	writing-mode: vertical-rl;
 	-webkit-writing-mode: vertical-rl;
 	-ms-writing-mode: vertical-rl;
+	width: 60px;
+	margin-top: 30%;
 }
 
 .hover-text {
@@ -90,23 +93,30 @@
 	border-right: var(--border-right) solid var(--animation-color);
 	overflow: hidden;
 	-webkit-text-stroke: 1px var(--animation-color);
+	display: grid;
+	align-content: center;
+	margin-top: 10px;
+	height: 40px;
 }
 .button:hover .hover-text {
-	width: 100%;
+	width: 300px;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
 	.App {
 		flex-direction: column;
+		overflow: hidden;
 	}
 	.title {
-		font-size: 2rem;
-		transform: rotate(270deg) scale(1.5);
-		-webkit-transform: rotate(270deg) scale(1.5);
-		-moz-transform: rotate(270deg) scale(1.5);
-		-ms-transform: rotate(270deg) scale(1.5);
-		-o-transform: rotate(270deg) scale(1.5);
-		margin-top: -3rem;
+		font-size: 1rem;
+		transform: rotate(0deg) scale(1.5);
+		-webkit-transform: rotate(0deg) scale(1.5);
+		-moz-transform: rotate(0deg) scale(1.5);
+		-ms-transform: rotate(0deg) scale(1.5);
+		-o-transform: rotate(0deg) scale(1.5);
+		display: grid;
+		align-content: stretch;
+		justify-content: center;
 	}
 	.titleRight {
 		font-size: 1.8rem;
@@ -118,12 +128,24 @@
 		-o-transform: rotate(270deg) scale(1.5);
 	}
 	.button {
-		font-size: 2rem;
+		width: 61px;
+		font-size: 1.6rem;
 		transform: rotate(0deg) scale(1.5);
 		-webkit-transform: rotate(0deg) scale(1.5);
 		-moz-transform: rotate(0deg) scale(1.5);
 		-ms-transform: rotate(0deg) scale(1.5);
 		-o-transform: rotate(0deg) scale(1.5);
 		margin-top: 2rem;
+	}
+	.hover-text {
+		display: grid;
+		justify-content: start;
+		height: 27px;
+		font-size: 1.6rem;
+		font-size: var(--fsç-size);
+		font-family: 'Poppins', sans-serif;
+		margin-top: -1px;
+		margin-left: -70px;
+		align-content: space-around;
 	}
 }
