@@ -4,7 +4,7 @@ import Teclas from './components/Teclas';
 function App() {
 	let docTitle = document.title;
 	window.addEventListener('blur', () => {
-		document.title = 'Come back :[';
+		document.title = '😭 Come back 😭';
 	});
 
 	window.addEventListener('focus', () => {
