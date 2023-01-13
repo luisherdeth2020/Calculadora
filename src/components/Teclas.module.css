@@ -49,7 +49,7 @@ a {
 	color: rgba(255, 255, 255, 0.72);
 }
 a:hover {
-	color: white;
+	color:#0d4c92 ;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -60,9 +60,11 @@ a:hover {
 	.error {
 		top: 95px;
 		width: 100%;
+		margin-left: -20px;
 	}
 	.calculator{
-		margin-top: 60px;
+		/* margin-top0: 60px; */
+		margin-top: 120px;
 	}
 	.years{
 		margin-top: 1rem;

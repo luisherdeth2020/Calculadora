@@ -16,7 +16,6 @@
 	min-height: 100vh;
 }
 
-
 .title {
 	color: #fff;
 	font-size: 2.5rem;
@@ -26,9 +25,10 @@
 	-moz-transform: rotate(180deg) scale(1.5);
 	-ms-transform: rotate(180deg) scale(1.5);
 	-o-transform: rotate(180deg) scale(1.5);
-	writing-mode: vertical-rl;
+	/* writing-mode: vertical-rl;
 	-webkit-writing-mode: vertical-rl;
-	-ms-writing-mode: vertical-rl;
+	-ms-writing-mode: vertical-rl; */
+	-webkit-text-stroke: 1px var(--text-stroke-color);
 }
 
 .titleRight {
@@ -46,27 +46,84 @@
 	-ms-writing-mode: vertical-rl;
 }
 
+/* test */
+.button {
+	background: transparent;
+	border: none;
+	height: auto;
+	margin: 0;
+	padding: 0;
+}
+.button {
+	--border-right: 6px;
+	--text-stroke-color: rgba(255, 255, 255, 0.6);
+	--animation-color: #0d4c92;
+	--fs-size: 2.5rem;
+	font-family: 'Poppins', sans-serif;
+	font-size: var(--fs-size);
+	letter-spacing: 2px;
+	position: relative;
+	transform: rotate(270deg) scale(1.5);
+	-webkit-transform: rotate(270deg) scale(1.5);
+	-moz-transform: rotate(270deg) scale(1.5);
+	-ms-transform: rotate(270deg) scale(1.5);
+	-o-transform: rotate(270deg) scale(1.5);
+	text-decoration: none;
+	text-transform: uppercase;
+	-webkit-text-stroke: 1px var(--text-stroke-color);
+	writing-mode: vertical-rl;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: vertical-rl;
+}
+
+.hover-text {
+	content: (data-text);
+	background: var(--animation-color);
+	box-sizing: border-box;
+	font-weight: bold;
+	position: absolute;
+	transition: 0.5s;
+	width: 0%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	inset: 0;
+	border-right: var(--border-right) solid var(--animation-color);
+	overflow: hidden;
+	-webkit-text-stroke: 1px var(--animation-color);
+}
+.button:hover .hover-text {
+	width: 100%;
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
 	.App {
 		flex-direction: column;
 	}
 	.title {
 		font-size: 2rem;
-		margin-top: -3rem;
 		transform: rotate(270deg) scale(1.5);
 		-webkit-transform: rotate(270deg) scale(1.5);
 		-moz-transform: rotate(270deg) scale(1.5);
 		-ms-transform: rotate(270deg) scale(1.5);
 		-o-transform: rotate(270deg) scale(1.5);
+		margin-top: -3rem;
 	}
 	.titleRight {
-		margin: 1rem;
 		font-size: 1.8rem;
+		margin: 1rem;
 		transform: rotate(270deg) scale(1.5);
 		-webkit-transform: rotate(270deg) scale(1.5);
 		-moz-transform: rotate(270deg) scale(1.5);
 		-ms-transform: rotate(270deg) scale(1.5);
 		-o-transform: rotate(270deg) scale(1.5);
 	}
-	
+	.button {
+		font-size: 2rem;
+		transform: rotate(0deg) scale(1.5);
+		-webkit-transform: rotate(0deg) scale(1.5);
+		-moz-transform: rotate(0deg) scale(1.5);
+		-ms-transform: rotate(0deg) scale(1.5);
+		-o-transform: rotate(0deg) scale(1.5);
+		margin-top: 2rem;
+	}
 }

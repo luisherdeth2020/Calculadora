@@ -13,8 +13,16 @@ function App() {
 
 	return (
 		<div className="App">
-			<span className="title">CALCULATOR</span>
+			<button data-text="Awesome" className="button">
+				<span className="title">
+					&nbsp;CALCULATOR&nbsp;
+				</span>
+				<span className="hover-text" aria-hidden="true">
+					&nbsp;CALCULATOR&nbsp;
+				</span>
+			</button>
 			<Teclas />
+
 			<span className="titleRight">v1.0</span>
 		</div>
 	);
