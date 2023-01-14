@@ -19,17 +19,13 @@
 
 .title {
 	color: #fff;
-	font-size: 2.5rem;
-	font-weight: bold;
-	transform: rotate(180deg) scale(1.5);
-	-webkit-transform: rotate(180deg) scale(1.5);
-	-moz-transform: rotate(180deg) scale(1.5);
-	-ms-transform: rotate(180deg) scale(1.5);
-	-o-transform: rotate(180deg) scale(1.5);
-	/* writing-mode: vertical-rl;
-	-webkit-writing-mode: vertical-rl;
-	-ms-writing-mode: vertical-rl; */
-	-webkit-text-stroke: 1px var(--text-stroke-color);
+	transform: rotate(270deg) scale(1.5);
+	-webkit-transform: rotate(270deg) scale(1.5);
+	-moz-transform: rotate(270deg) scale(1.5);
+	-ms-transform: rotate(270deg) scale(1.5);
+	-o-transform: rotate(270deg) scale(1.5);
+	/* -webkit-text-stroke: 1px var(--text-stroke-color); */
+	writing-mode: vertical-rl;
 }
 
 .titleRight {
@@ -48,21 +44,15 @@
 }
 
 /* test */
-.button {
-	background: transparent;
-	border: none;
-	height: auto;
-	margin: 0;
-	padding: 0;
-}
+
 .button {
 	--border-right: 6px;
 	--text-stroke-color: rgba(255, 255, 255, 0.6);
 	--animation-color: #0d4c92;
-	--fs-size: 2.5rem;
-	font-family: 'Poppins', sans-serif;
-	font-size: var(--fs-size);
+	font-family: Poppins, sans-serif;
+	font-size: 1.5em;
 	letter-spacing: 2px;
+	font-weight: 700;
 	position: relative;
 	transform: rotate(270deg) scale(1.5);
 	-webkit-transform: rotate(270deg) scale(1.5);
@@ -71,21 +61,14 @@
 	-o-transform: rotate(270deg) scale(1.5);
 	text-decoration: none;
 	text-transform: uppercase;
-	-webkit-text-stroke: 1px var(--text-stroke-color);
-	writing-mode: vertical-rl;
-	-webkit-writing-mode: vertical-rl;
-	-ms-writing-mode: vertical-rl;
-	width: 60px;
-	margin-top: 30%;
 }
 
 .hover-text {
-	content: (data-text);
 	background: var(--animation-color);
 	box-sizing: border-box;
-	font-weight: bold;
 	position: absolute;
 	transition: 0.5s;
+	font-size: 1.6em;
 	width: 0%;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -94,12 +77,17 @@
 	overflow: hidden;
 	-webkit-text-stroke: 1px var(--animation-color);
 	display: grid;
-	align-content: center;
-	margin-top: 10px;
 	height: 40px;
+	margin: 75px -128px;
+	align-content: center;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
 }
 .button:hover .hover-text {
-	width: 300px;
+	width: 288px;
+	/* font-size: 2.4rem; */
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
