@@ -64,45 +64,34 @@
 	font-size: var(--fs-size);
 	letter-spacing: 2px;
 	position: relative;
-	transform: rotate(270deg) scale(1.5);
-	-webkit-transform: rotate(270deg) scale(1.5);
-	-moz-transform: rotate(270deg) scale(1.5);
-	-ms-transform: rotate(270deg) scale(1.5);
-	-o-transform: rotate(270deg) scale(1.5);
+	transform: rotate(180deg) scale(1.5);
 	text-decoration: none;
 	text-transform: uppercase;
 	-webkit-text-stroke: 1px var(--text-stroke-color);
 	writing-mode: vertical-rl;
-	-webkit-writing-mode: vertical-rl;
-	-ms-writing-mode: vertical-rl;
-	width: 60px;
-	margin-top: 30%;
 }
 
 .hover-text {
-	content: (data-text);
 	background: var(--animation-color);
 	box-sizing: border-box;
 	font-weight: bold;
 	position: absolute;
 	transition: 0.5s;
-	width: 0%;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	inset: 0;
-	border-right: var(--border-right) solid var(--animation-color);
+	border-bottom: var(--border-right) solid var(--animation-color);
 	overflow: hidden;
 	-webkit-text-stroke: 1px var(--animation-color);
 	display: grid;
 	align-content: center;
-	margin-top: 10px;
-	height: 40px;
+	height: 0;
 }
 .button:hover .hover-text {
-	width: 300px;
+	height: 300px;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media screen and (max-width: 768px) {
 	.App {
 		flex-direction: column;
 		overflow: hidden;
@@ -131,10 +120,7 @@
 		width: 61px;
 		font-size: 1.6rem;
 		transform: rotate(0deg) scale(1.5);
-		-webkit-transform: rotate(0deg) scale(1.5);
-		-moz-transform: rotate(0deg) scale(1.5);
-		-ms-transform: rotate(0deg) scale(1.5);
-		-o-transform: rotate(0deg) scale(1.5);
+		writing-mode: horizontal-tb;
 		margin-top: 2rem;
 	}
 	.hover-text {
@@ -147,5 +133,13 @@
 		margin-top: -1px;
 		margin-left: -70px;
 		align-content: space-around;
+		width: 0%;
+		border-bottom: none;
+		border-right: var(--border-right) solid var(--animation-color);
+	}
+
+	.button:hover .hover-text {
+		width: 300px;
+		height: auto;
 	}
 }

@@ -13,14 +13,14 @@ function App() {
 
 	return (
 		<div className="App">
-			<button data-text="Awesome" className="button">
+			<span data-text="Awesome" className="button">
 				<span className="title">
 					&nbsp;CALCULATOR&nbsp;
 				</span>
 				<span className="hover-text" aria-hidden="true">
 					&nbsp;CALCULATOR&nbsp;
 				</span>
-			</button>
+			</span>
 			<Teclas />
 
 			<span className="titleRight">v1.0</span>
