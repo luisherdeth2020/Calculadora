@@ -17,17 +17,6 @@
 	min-height: 100vh;
 }
 
-.title {
-	color: #fff;
-	transform: rotate(270deg) scale(1.5);
-	-webkit-transform: rotate(270deg) scale(1.5);
-	-moz-transform: rotate(270deg) scale(1.5);
-	-ms-transform: rotate(270deg) scale(1.5);
-	-o-transform: rotate(270deg) scale(1.5);
-	/* -webkit-text-stroke: 1px var(--text-stroke-color); */
-	writing-mode: vertical-rl;
-}
-
 .titleRight {
 	color: #fff;
 	font-size: 2.5rem;
@@ -43,51 +32,57 @@
 	-ms-writing-mode: vertical-rl;
 }
 
-/* test */
-
 .button {
 	--border-right: 6px;
 	--text-stroke-color: rgba(255, 255, 255, 0.6);
 	--animation-color: #0d4c92;
-	font-family: Poppins, sans-serif;
-	font-size: 1.5em;
+	font-family: 'Poppins', sans-serif;
+	font-size: 2.5rem;
+	color:white;
 	letter-spacing: 2px;
 	font-weight: 700;
 	position: relative;
-	transform: rotate(270deg) scale(1.5);
-	-webkit-transform: rotate(270deg) scale(1.5);
-	-moz-transform: rotate(270deg) scale(1.5);
-	-ms-transform: rotate(270deg) scale(1.5);
-	-o-transform: rotate(270deg) scale(1.5);
+	transform: rotate(180deg) scale(1.5);
+	-webkit-transform: rotate(180deg) scale(1.5);
+	-moz-transform: rotate(180deg) scale(1.5);
+	-ms-transform: rotate(180deg) scale(1.5);
+	-o-transform: rotate(180deg) scale(1.5);
 	text-decoration: none;
 	text-transform: uppercase;
+	writing-mode: vertical-rl;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: vertical-rl;
+	-webkit-text-stroke: 1px var(--text-stroke-color);
 }
 
 .hover-text {
 	background: var(--animation-color);
 	box-sizing: border-box;
 	position: absolute;
+	font-weight: bold;
 	transition: 0.5s;
-	font-size: 1.6em;
-	width: 0%;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	inset: 0;
-	border-right: var(--border-right) solid var(--animation-color);
+	border-bottom: var(--border-right) solid var(--animation-color);
 	overflow: hidden;
 	-webkit-text-stroke: 1px var(--animation-color);
-	display: grid;
-	height: 40px;
-	margin: 75px -128px;
-	align-content: center;
+	height:0;
 	-webkit-transition: 0.5s;
 	-moz-transition: 0.5s;
 	-ms-transition: 0.5s;
 	-o-transition: 0.5s;
+	
 }
 .button:hover .hover-text {
-	width: 288px;
-	/* font-size: 2.4rem; */
+	height: 300px;
+}
+
+.wrapper {
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	align-items: center;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -95,17 +90,11 @@
 		flex-direction: column;
 		overflow: hidden;
 	}
-	.title {
-		font-size: 1rem;
-		transform: rotate(0deg) scale(1.5);
-		-webkit-transform: rotate(0deg) scale(1.5);
-		-moz-transform: rotate(0deg) scale(1.5);
-		-ms-transform: rotate(0deg) scale(1.5);
-		-o-transform: rotate(0deg) scale(1.5);
-		display: grid;
-		align-content: stretch;
-		justify-content: center;
+
+	.wrapper {
+		flex-flow: column;
 	}
+
 	.titleRight {
 		font-size: 1.8rem;
 		margin: 1rem;
@@ -116,24 +105,21 @@
 		-o-transform: rotate(270deg) scale(1.5);
 	}
 	.button {
-		width: 61px;
 		font-size: 1.6rem;
-		transform: rotate(0deg) scale(1.5);
-		-webkit-transform: rotate(0deg) scale(1.5);
-		-moz-transform: rotate(0deg) scale(1.5);
-		-ms-transform: rotate(0deg) scale(1.5);
-		-o-transform: rotate(0deg) scale(1.5);
-		margin-top: 2rem;
-	}
+		transform: rotate(270deg) scale(1.5);
+		-webkit-transform: rotate(270deg) scale(1.5);
+		-moz-transform: rotate(270deg) scale(1.5);
+		-ms-transform: rotate(270deg) scale(1.5);
+		-o-transform: rotate(270deg) scale(1.5);
+}
 	.hover-text {
-		display: grid;
-		justify-content: start;
-		height: 27px;
+		height: 0px;
 		font-size: 1.6rem;
 		font-size: var(--fsç-size);
 		font-family: 'Poppins', sans-serif;
-		margin-top: -1px;
-		margin-left: -70px;
-		align-content: space-around;
+
+	}
+	.button:hover .hover-text{
+		height: 200px;
 	}
 }

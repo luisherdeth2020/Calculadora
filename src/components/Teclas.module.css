@@ -59,7 +59,7 @@ a:hover {
 		grid-template-columns:repeat(4, 90px)
 	}
 	.error {
-		top: 95px;
+		top: 180px;
 		width: 100%;
 		margin-left: -20px;
 	}

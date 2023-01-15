@@ -12,19 +12,24 @@ function App() {
 	});
 
 	return (
-		<div className="App">
-			<span className="button">
-				<span className="title">
-					&nbsp;CALCULATOR&nbsp;
-				</span>
-				<span className="hover-text" aria-hidden="true">
-					&nbsp;CALCULATOR&nbsp;
-				</span>
-			</span>
-			<Teclas />
-
-			<span className="titleRight">v1.0</span>
-		</div>
+		<main className="App">
+			<section className="wrapper">
+				<header>
+					<span className="button">
+						&nbsp;CALCULATOR&nbsp;
+						<span className="hover-text" aria-hidden="true">
+							&nbsp;CALCULATOR&nbsp;
+						</span>
+					</span>
+				</header>
+				<section>
+					<Teclas />
+				</section>
+				<aside>
+					<span className="titleRight">v1.0</span>
+				</aside>
+			</section>
+		</main>
 	);
 }
 
