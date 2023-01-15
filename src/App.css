@@ -7,16 +7,17 @@
 }
 
 .App {
-	align-items: center;
 	background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
-	display: flex;
 	font-family: 'Poppins', sans-serif;
 	/* background: linear-gradient(90deg, rgba(7, 6, 37, 1) 0%, rgba(39, 39, 111, 1) 40%, rgba(11, 14, 33, 1) 100%); */
 	font-size: 16px;
-	justify-content: space-evenly;
 	min-height: 100vh;
 }
-
+.years {
+	color: white;
+	text-align: center;
+	margin-top: 2rem;
+}
 .titleRight {
 	color: #fff;
 	font-size: 2.5rem;
@@ -36,11 +37,11 @@
 	--border-right: 6px;
 	--text-stroke-color: rgba(255, 255, 255, 0.6);
 	--animation-color: #0d4c92;
+	color: white;
 	font-family: 'Poppins', sans-serif;
 	font-size: 2.5rem;
-	color:white;
-	letter-spacing: 2px;
 	font-weight: 700;
+	letter-spacing: 2px;
 	position: relative;
 	transform: rotate(180deg) scale(1.5);
 	-webkit-transform: rotate(180deg) scale(1.5);
@@ -58,37 +59,39 @@
 .hover-text {
 	background: var(--animation-color);
 	box-sizing: border-box;
-	position: absolute;
 	font-weight: bold;
+	height: 0;
+	position: absolute;
 	transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	inset: 0;
 	border-bottom: var(--border-right) solid var(--animation-color);
 	overflow: hidden;
 	-webkit-text-stroke: 1px var(--animation-color);
-	height:0;
-	-webkit-transition: 0.5s;
-	-moz-transition: 0.5s;
-	-ms-transition: 0.5s;
-	-o-transition: 0.5s;
-	
 }
 .button:hover .hover-text {
 	height: 300px;
 }
 
 .wrapper {
+	align-items: center;
 	display: flex;
 	justify-content: space-evenly;
 	width: 100%;
-	align-items: center;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
 	.App {
 		flex-direction: column;
 		overflow: hidden;
+	}
+	.years {
+		margin: 0 0 2rem 0;
 	}
 
 	.wrapper {
@@ -111,15 +114,14 @@
 		-moz-transform: rotate(270deg) scale(1.5);
 		-ms-transform: rotate(270deg) scale(1.5);
 		-o-transform: rotate(270deg) scale(1.5);
-}
+	}
 	.hover-text {
-		height: 0px;
+		font-family: 'Poppins', sans-serif;
 		font-size: 1.6rem;
 		font-size: var(--fsç-size);
-		font-family: 'Poppins', sans-serif;
-
+		height: 0px;
 	}
-	.button:hover .hover-text{
+	.button:hover .hover-text {
 		height: 200px;
 	}
 }

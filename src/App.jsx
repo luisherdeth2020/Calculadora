@@ -10,6 +10,7 @@ function App() {
 	window.addEventListener('focus', () => {
 		document.title = docTitle;
 	});
+	const year = new Date().getFullYear();
 
 	return (
 		<main className="App">
@@ -29,6 +30,9 @@ function App() {
 					<span className="titleRight">v1.0</span>
 				</aside>
 			</section>
+			<footer className="years">
+				Copyright &copy; <span>{year}</span> <a href="https://luisherdeth.com/">@luisherdeth</a>
+			</footer>
 		</main>
 	);
 }
